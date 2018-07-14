@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<title>Backbone Rolodex</title>
+</head>
+
+<body>
+	<div class="container">
+		<h1>Backbone Rolodex</h1>
+		<table class="table table-responsive">
+			<thead>
+				<tr>
+					<th style="width: 19%">Name</th>
+					<th style="width: 19%">Phone Number</th>
+					<th style="width: 19%">Email</th>
+					<th style="width: 19%">Address</th>
+					<th style="width: 24%">Action</th>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" class="form-control name-input">
+					</td>
+					<td>
+						<input type="text" class="form-control phone-input">
+					</td>
+					<td>
+						<input type="text" class="form-control email-input">
+					</td>
+					<td>
+						<input type="text" class="form-control address-input">
+					</td>
+					<td>
+						<button class="btn btn-primary add-contact">Add Contact</button>
+					</td>
+				</tr>
+			</thead>
+			<tbody class="contact-list">
+			</tbody>
+		</table>
+	</div>
+	<script type="text/template" class="contact-list-template">
+		<td>
+			<span class="name">
+				<%= name %>
+			</span>
+		</td>
+		<td>
+			<span class="phone">
+				<%= phone %>
+			</span>
+		</td>
+		<td>
+			<span class="email">
+				<%= email %>
+			</span>
+		</td>
+		<td>
+			<span class="address">
+				<%= address %>
+			</span>
+		</td>
+		<td>
+			<button type="button" class="btn btn-warning edit-contact">Edit</button>
+			<button type="button" class="btn btn-danger delete-contact">Delete</button>
+			<button type="button" class="btn btn-success update-contact" style="display:none">Update</button>
+			<button type="button" class="btn btn-danger cancel" style="display:none">Cancel</button>
+		</td>
+	</script>
+	<script src="node_modules/jquery/dist/jquery.js" charset="utf-8"></script>
+	<script src="node_modules/underscore/underscore.js" charset="utf-8"></script>
+	<script src="node_modules/backbone/backbone.js" charset="utf-8"></script>
+	<script src="js/app.js"></script>
+</body>
+
+</html>
